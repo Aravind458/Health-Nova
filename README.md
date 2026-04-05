@@ -108,7 +108,7 @@ cd frontend
 npm install
 npm run dev
 ```
-
+   
 ### Step 4: Open the App!
 That's it! Open your web browser (Chrome, Safari, Edge) and type in:
 👉 `http://localhost:3000`
@@ -121,5 +121,6 @@ The beautiful Health Nova website will appear and is completely ready to use!
 
 ## Conclusion
 Health Nova demonstrates the transformative potential of integrating artificial intelligence with healthcare accessibility. By providing a secure, instant, and reliable platform for preliminary health screening, it empowers individuals to monitor their well-being proactively. While not a replacement for professional diagnosis, Health Nova serves as a crucial first line of defense, potentially catching life-threatening conditions early enough for effective intervention.
-#   H e a l t h - N o v a  
+#   H e a l t h - N o v a 
+ 
  
