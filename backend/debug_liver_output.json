@@ -1,0 +1,28 @@
+[
+    {
+        "label": "HIGH_RISK_INPUT",
+        "input_df": "[{'Age': 65, 'Gender': 1, 'Total_Bilirubin': 15.0, 'Direct_Bilirubin': 8.0, 'Alkaline_Phosphotase': 400, 'Alamine_Aminotransferase': 200, 'Aspartate_Aminotransferase': 300, 'Total_Protiens': 4.0, 'Albumin': 2.0, 'Albumin_and_Globulin_Ratio': 0.5}]",
+        "prediction_result": {
+            "risk_level": "High",
+            "diagnosis": "High",
+            "classification": "High",
+            "probability_knn": 1.0,
+            "probability_svm": 0.9,
+            "recommended_model": "SVM",
+            "explanation": "Analysis based on 10 clinical biomarkers."
+        }
+    },
+    {
+        "label": "LOW_RISK_INPUT",
+        "input_df": "[{'Age': 30, 'Gender': 0, 'Total_Bilirubin': 0.8, 'Direct_Bilirubin': 0.2, 'Alkaline_Phosphotase': 150, 'Alamine_Aminotransferase': 20, 'Aspartate_Aminotransferase': 25, 'Total_Protiens': 7.0, 'Albumin': 4.0, 'Albumin_and_Globulin_Ratio': 1.2}]",
+        "prediction_result": {
+            "risk_level": "High",
+            "diagnosis": "High",
+            "classification": "High",
+            "probability_knn": 0.61,
+            "probability_svm": 0.53,
+            "recommended_model": "SVM",
+            "explanation": "Analysis based on 10 clinical biomarkers."
+        }
+    }
+]

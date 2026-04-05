@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-radius: var(--radius);
+  
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    /* Background: #F8FAFC (Very light blue-gray) */
+    --background: 210 20% 98%; 
+    /* Text: #1E293B (Dark slate) */
+    --foreground: 215 27% 17%;
+
+    /* Card: #FFFFFF */
+    --card: 0 0% 100%;
+    --card-foreground: 215 27% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 27% 17%;
+
+    /* Primary: #0066CC (Medical Blue) */
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: #06B6D4 (Soft Teal) */
+    --secondary: 186 94% 42%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent: #F97316 (Warm Coral) */
+    --accent: 24 94% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Error: #EF4444 */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success: #10B981 */
+    --success: 151 84% 39%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning: #F59E0B */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 100% 40%;
+
+    --radius: 0.5rem;
+
+    /* --- REDESIGN PALETTE --- */
+    
+    /* Primary Brand Colors */
+    --primary-blue: 210 100% 40%;    /* #0066CC */
+    --primary-teal: 174 80% 40%;     /* #14B8A6 */
+    
+    /* Condition Themes */
+    --heart-red: 0 84% 60%;          /* #EF4444 */
+    --diabetes-blue: 217 91% 60%;    /* #3B82F6 */
+    --kidney-purple: 258 90% 66%;    /* #8B5CF6 */
+    --liver-orange: 24 95% 53%;      /* #F97316 */
+
+    /* Neutrals */
+    --gray-50: 210 40% 98%;
+    --gray-100: 210 40% 96.1%;
+    --gray-200: 214.3 31.8% 91.4%;
+    --gray-300: 212.7 26.8% 83.9%;
+    --gray-600: 215 16% 47%;
+    --gray-700: 215 25% 27%;
+    --gray-900: 222.2 47% 11%;
+  }
+
+@layer utilities {
+    .text-primary-gradient {
+        background: linear-gradient(135deg, hsl(var(--primary-blue)), hsl(var(--primary-teal)));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-primary-gradient {
+        background: linear-gradient(135deg, hsl(var(--primary-blue)), hsl(var(--primary-teal)));
+    }
+    
+    /* Animation Classes */
+    .gradient-text {
+        background: linear-gradient(135deg, #0066CC 0%, #14B8A6 50%, #0066CC 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-shift 3s ease infinite;
+    }
+
+    .btn-primary-pulse {
+        animation: pulse-glow 2s ease-in-out infinite;
+    }
+
+    .health-overview-card-float {
+        animation: float-card 6s ease-in-out infinite;
+        animation-delay: 1s; 
+    }
+
+    .heartbeat-svg-pulse path {
+        animation: heartbeat-pulse 2s ease-in-out infinite;
+        animation-delay: 2.5s;
+    }
+
+    .status-dot-pulse {
+        animation: dot-pulse 2s ease-in-out infinite;
+    }
+
+    .live-ring::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 2px solid #10B981;
+        animation: live-ring 2s ease-out infinite;
+    }
+
+    .arrow-wiggle {
+        animation: arrow-wiggle 1s ease-in-out 0.5s;
+    }
+}
+
+/* Keyframes */
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 10px 40px -10px rgba(0, 102, 204, 0.4); }
+    50% { box-shadow: 0 10px 40px -10px rgba(0, 102, 204, 0.6); }
+}
+
+@keyframes float-card {
+    0%, 100% { transform: translateY(0px) rotateY(0deg); }
+    50% { transform: translateY(-15px) rotateY(-2deg); }
+}
+
+@keyframes heartbeat-pulse {
+    0%, 100% { filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4)); }
+    50% { filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.8)); }
+}
+
+@keyframes dot-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+@keyframes live-ring {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes arrow-wiggle {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+}
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 186 94% 42%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

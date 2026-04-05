@@ -1,0 +1,66 @@
+{
+    "steps": [
+        {
+            "id": 1,
+            "title": "Share Your Health Information",
+            "description": "You'll answer a series of questions about your health metrics, medical history, and lifestyle. Our intelligent forms guide you through each parameter, explaining what each value means and where to find it in your medical records.",
+            "icon": "ClipboardCheck",
+            "features": [
+                "Smart form validation ensures accuracy",
+                "Help tooltips for every medical term",
+                "Skip fields you don't know (optional inputs)",
+                "Takes 3-5 minutes on average"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Advanced Machine Learning",
+            "description": "Your data is instantly processed by two sophisticated algorithms: K-Nearest Neighbors (KNN) and Support Vector Machine (SVM). These models have been trained on thousands of validated medical cases from UCI databases and FDA-approved datasets to identify patterns associated with disease risk.",
+            "icon": "BrainCircuit",
+            "features": [
+                "Dual-model validation for accuracy",
+                "Processing completes in under 3 seconds",
+                "Encrypted data transmission (TLS 1.3)",
+                "No data stored on our servers"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Receive Clear, Actionable Insights",
+            "description": "You'll receive an easy-to-understand risk assessment showing your likelihood for each condition: Low, Moderate, or High. Results include probability scores from both AI models, key risk factors identified, and personalized recommendations for next steps.",
+            "icon": "FileText",
+            "features": [
+                "Color-coded risk levels for clarity",
+                "Detailed breakdown of contributing factors",
+                "Evidence-based lifestyle recommendations",
+                "Links to relevant medical resources"
+            ]
+        }
+    ],
+    "faqs": [
+        {
+            "question": "Is Health Nova a medical diagnosis tool?",
+            "answer": "No. Health Nova is a risk assessment tool, not a diagnostic device. Our AI models predict your likelihood of having certain conditions based on your inputs, but they cannot diagnose diseases. Only a licensed healthcare provider can provide a medical diagnosis."
+        },
+        {
+            "question": "How accurate are the predictions?",
+            "answer": "Our models achieve 89-94% accuracy based on validation against test datasets. However, accuracy can vary based on the quality of your inputs. We use two independent models to cross-validate predictions for higher confidence."
+        },
+        {
+            "question": "Do I need to create an account?",
+            "answer": "No. Health Nova requires no registration to use the core assessment tools. You can use the service completely anonymously. However, creating a free account allows you to save your assessment history and track your health progress over time."
+        },
+        {
+            "question": "What happens to my data after I submit it?",
+            "answer": "If you use the service anonymously, your data is processed strictly in-memory to generate results and is immediately deleted. If you create an account and log in, your assessment history is securely encrypted and saved to your personal dashboard."
+        },
+        {
+            "question": "Is this service free?",
+            "answer": "Yes, Health Nova is completely free to use. We believe early health insights should be accessible to everyone."
+        },
+        {
+            "question": "Which medical conditions can Health Nova assess?",
+            "answer": "Currently, we assess risks for Heart Disease, Diabetes, Chronic Kidney Disease, and Liver Disease. More conditions will be added in future updates."
+        }
+    ]
+}

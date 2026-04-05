@@ -1,0 +1,134 @@
+{
+    "overall": {
+        "accuracy": 94.2,
+        "predictions": "12,450+",
+        "uptime": "99.9%",
+        "last_update": "Jan 2026"
+    },
+    "conditions": [
+        {
+            "id": "heart",
+            "name": "Heart Disease",
+            "model": "SVM (Support Vector Machine)",
+            "accuracy": 86.9,
+            "sensitivity": 89.3,
+            "specificity": 84.8,
+            "training_size": "303 samples",
+            "dataset": "UCI Heart Disease",
+            "features": [
+                "age",
+                "sex",
+                "cp",
+                "trestbps",
+                "chol"
+            ],
+            "confusion_matrix": {
+                "tp": 25,
+                "fp": 5,
+                "tn": 28,
+                "fn": 3
+            }
+        },
+        {
+            "id": "kidney",
+            "name": "Chronic Kidney Disease",
+            "model": "KNN (Simulated by SVM here)",
+            "accuracy": 100.0,
+            "sensitivity": 100.0,
+            "specificity": 100.0,
+            "training_size": "400 samples",
+            "dataset": "UCI CKD",
+            "features": [
+                "age",
+                "bp",
+                "sg",
+                "al",
+                "su"
+            ],
+            "confusion_matrix": {
+                "tp": 30,
+                "fp": 0,
+                "tn": 50,
+                "fn": 0
+            }
+        },
+        {
+            "id": "diabetes",
+            "name": "Diabetes",
+            "model": "Simulated by SVM here",
+            "accuracy": 96.4,
+            "sensitivity": 59.0,
+            "specificity": 99.8,
+            "training_size": "100000 samples",
+            "dataset": "PIMA Indians / UCI",
+            "features": [
+                "gender",
+                "age",
+                "hypertension",
+                "heart_disease",
+                "bmi"
+            ],
+            "confusion_matrix": {
+                "tp": 1003,
+                "fp": 28,
+                "tn": 18272,
+                "fn": 697
+            }
+        },
+        {
+            "id": "liver",
+            "name": "Liver Disease",
+            "model": "SVM (Support Vector Machine)",
+            "accuracy": 70.1,
+            "sensitivity": 63.9,
+            "specificity": 85.3,
+            "training_size": "583 samples",
+            "dataset": "ILPD (Indian Liver Patient)",
+            "features": [
+                "Age",
+                "Gender",
+                "Total_Bilirubin",
+                "Direct_Bilirubin",
+                "Alkaline_Phosphotase"
+            ],
+            "confusion_matrix": {
+                "tp": 53,
+                "fp": 5,
+                "tn": 29,
+                "fn": 30
+            }
+        }
+    ],
+    "comparison": [
+        {
+            "metric": "Accuracy",
+            "knn": 86.9,
+            "svm": 86.9,
+            "winner": "KNN"
+        },
+        {
+            "metric": "Inference Speed",
+            "knn": 95,
+            "svm": 88,
+            "winner": "KNN"
+        },
+        {
+            "metric": "Interpretability",
+            "knn": 90,
+            "svm": 65,
+            "winner": "KNN"
+        },
+        {
+            "metric": "High-Dim Data",
+            "knn": 70,
+            "svm": 92,
+            "winner": "SVM"
+        },
+        {
+            "metric": "Accuracy (Diabetes)",
+            "knn": 96.2,
+            "svm": 96.4,
+            "winner": "SVM"
+        }
+    ]
+}

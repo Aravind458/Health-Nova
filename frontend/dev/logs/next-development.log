@@ -1,0 +1,5 @@
+[00:00:04.070] Server  LOG     ✓ Ready in 2.8s
+[00:00:33.597] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:04.736] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:13:41.343] Server  LOG     ⚠ Console Ninja Turbopack support is a PRO feature, currently available to community users while in preview
+[00:13:44.722] Server  LOG     ✓ Compiled in 2.1s
